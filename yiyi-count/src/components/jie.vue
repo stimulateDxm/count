@@ -30,7 +30,7 @@ export default {
       return Math.floor(Math.random() * (max - min)) + min;
     }
     //随机生成20组对象并增加为一个数组
-    for (let i=0; i<20;i++){
+    for (let i=0; i<38;i++){
       const obj={pre:h.random(10,20),next:h.random(1,10)}
       h.nums.push(obj)
     }

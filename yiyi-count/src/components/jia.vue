@@ -33,10 +33,9 @@ export default {
       return Math.floor(Math.random() * (max - min)) + min;
     }
     //随机生成20组对象并增加为一个数组
-    for (let i=0; i<20;i++){
+    for (let i=0; i<38;i++){
       const obj={pre:h.random(h.minss,h.maxss),next:h.random(h.minss,h.maxss)}
       h.nums.push(obj)
-      
     }
 
     //更新加法

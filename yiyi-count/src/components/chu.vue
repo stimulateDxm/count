@@ -32,7 +32,7 @@ export default {
     }
     //随机生成20组对象并增加为一个数组
      h.maxss=(h.maxs/2===parseInt(h.maxs/2) ? h.maxs/2 : h.maxs/2-1)
-      for (let i=0; i<200;i++){
+      for (let i=0; i<300;i++){
         let pushs=[]
         let objs={}
         const obj={pre:h.random(h.mins,h.maxs),next:h.random(h.mins,h.maxss)}
