@@ -67,10 +67,10 @@ export default {
       }
       for (let j=0; j<20;j++) {
         if(h.results[j].value){
-          h.results[j].value = ""
+          h.results[j].value =""
+          h.results[j].nextSibling.innerHTML = `<span  class="svgs" ></span>`
         }
-        h.results[j].nextSibling.innerHTML = `<span  class="svgs" >
-  </span>`
+
       }
     },
     //判断答得是否正确

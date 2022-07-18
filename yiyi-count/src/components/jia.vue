@@ -36,6 +36,7 @@ export default {
     for (let i=0; i<20;i++){
       const obj={pre:h.random(h.minss,h.maxss),next:h.random(h.minss,h.maxss)}
       h.nums.push(obj)
+      
     }
 
     //更新加法
