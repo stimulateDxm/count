@@ -6,7 +6,7 @@
   <div v-show="isgo==1"><Jia  ></Jia></div>
   <div v-show="isgo===2"><Jie  ></Jie></div>
   <div v-show="isgo===3"><Chen ></Chen></div>
-  <div  v-if="isgo===4"><Chu ></Chu></div>
+  <div  v-show="isgo===4"><Chu ></Chu></div>
 
 </template>
 
