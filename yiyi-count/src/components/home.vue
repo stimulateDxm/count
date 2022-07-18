@@ -1,12 +1,13 @@
 <template>
   <div class="yiyi">
-    <span >加</span> <span >减</span> <span>乘</span> <span>除</span>
+    <span @click="isgo=1">加</span> <span @click="isgo=2">减</span> <span @click="isgo=3">乘</span> <span @click="isgo=4">除</span>
   </div>
   <div class="k"></div>
-  <Jia ></Jia>
-  <Jie ></Jie>
-  <Chen ></Chen>
-  <Chu ></Chu>
+  <div v-show="isgo==1"><Jia  ></Jia></div>
+  <div v-show="isgo===2"><Jie  ></Jie></div>
+  <div v-show="isgo===3"><Chen ></Chen></div>
+  <div  v-if="isgo===4"><Chu ></Chu></div>
+
 </template>
 
 <script>
@@ -15,26 +16,22 @@ import Jie from "../components/jie"
 import Chen from "../components/chen"
 import Chu from "../components/chu"
 
-// import {reactive,toRefs,onMounted} from 'vue'
+import {reactive,toRefs} from 'vue'
 export default {
   name: 'Home',
   components: {
     Jia,Jie,Chen,Chu
   },
-  // setup(){
-  //   let h= reactive({
-  //       isgo:[true,false,false,false],
-  //       isjia:[true,false,false,false],
-  //       isjie:[false,true,false,false],
-  //       ischen:[false,false,true,false],
-  //       ischu:[false,false,false,true]
-  //       }
-  //   )
-  //   onMounted(console.log(h.isgo[0]))
-  //   return{
-  //     ...toRefs(h)
-  //   }
-  // }
+  setup(){
+    let h= reactive({
+        isgo:1
+
+        }
+    )
+    return{
+      ...toRefs(h)
+    }
+  }
 
 }
 </script>
