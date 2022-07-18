@@ -1,24 +1,40 @@
 <template>
-
   <div class="yiyi">
-    <span>加</span> <span>减</span> <span>乘</span>
+    <span >加</span> <span >减</span> <span>乘</span> <span>除</span>
   </div>
   <div class="k"></div>
   <Jia ></Jia>
   <Jie ></Jie>
   <Chen ></Chen>
+  <Chu ></Chu>
 </template>
 
 <script>
 import Jia from "../components/jia"
 import Jie from "../components/jie"
 import Chen from "../components/chen"
+import Chu from "../components/chu"
 
+// import {reactive,toRefs,onMounted} from 'vue'
 export default {
   name: 'Home',
   components: {
-    Jia,Jie,Chen
+    Jia,Jie,Chen,Chu
   },
+  // setup(){
+  //   let h= reactive({
+  //       isgo:[true,false,false,false],
+  //       isjia:[true,false,false,false],
+  //       isjie:[false,true,false,false],
+  //       ischen:[false,false,true,false],
+  //       ischu:[false,false,false,true]
+  //       }
+  //   )
+  //   onMounted(console.log(h.isgo[0]))
+  //   return{
+  //     ...toRefs(h)
+  //   }
+  // }
 
 }
 </script>

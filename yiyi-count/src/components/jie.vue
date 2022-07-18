@@ -1,7 +1,7 @@
 <template>
   <h1>减法</h1>
   <div class="yiyijie">
-    <span>最小数</span><input type="text" v-model="mins"> <span>最大数</span><input type="text" v-model="maxs">
+    <span>最小数<p>(可选)</p></span><input type="text" v-model="mins"> <span>最大数<p>(可选)</p></span><input type="text" v-model="maxs">
     <button @click="update()">更新</button>
   </div>
   <div v-for="(v,i) of nums" :key="i" class="jie">
@@ -87,6 +87,10 @@ h1,input{
   margin-left: -20px;
   width: 100%;
 }
+.yiyijie p{
+  color: gray;
+  font-size: 16px;
+}
 .yiyijie span {
   width: 20%;
   font-size: 20px;
@@ -119,7 +123,7 @@ div{
 
 }
 input,span{
-  width: 2rem;
+  width: 4rem;
   margin-bottom: 15px;
   font-size: 20px;
   border: 1px solid white;
@@ -132,6 +136,6 @@ input,span{
 }
 .svgs{
   height: 50px;
-  width: 80px;
+  width: 100px;
 }
 </style>
