@@ -46,7 +46,7 @@ export default {
       h.overjia=0
       context.emit("overjia",h.overjia)
       //随机生成20组对象并增加为一个数组
-      for (let i=0; i<20;i++){
+      for (let i=0; i<50;i++){
         const obj1={pre:h.random(parseInt(h.mins),parseInt(h.maxs)),next:h.random(parseInt(h.mins),parseInt(h.maxs))}
         h.nums.push(obj1)
         h.results[i].value=""

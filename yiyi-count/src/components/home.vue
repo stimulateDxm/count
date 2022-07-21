@@ -1,14 +1,14 @@
 <template>
   <div class="yiyi">
-    <span @click="isgo=1" :style="{ opacity : isgo ===1 ? '0.8 ': '0.5'}">加</span> <span @click="isgo=2" :style="{ opacity : isgo ===2 ? '0.8 ': '0.5'}">减</span> <span @click="isgo=3" :style="{ opacity : isgo ===3? '0.8 ': '0.5'}">乘</span> <span @click="isgo=4" :style="{ opacity : isgo ===4 ? '0.8 ': '0.5'}">除</span>
+    <router-link to="/jia" >加</router-link>
+    <router-link to="/jie">减</router-link>
+    <router-link to="chen">乘</router-link>
+    <router-link to="chu">除</router-link>
 <!--    <span @click="isgo=5" class="yiImg"><img src="../../src/assets/yiyi.png"></span>-->
   </div>
-  <div class="over"><span>总完成:{{over}}</span><span>  + : {{jiaOver}}</span><span>  - : {{jieOver}}</span><span>  * : {{chenOver}}</span><span>  / : {{chuOver}}</span></div>
+<!--  <div class="over"><span>总完成:{{over}}</span><span>  + : {{jiaOver}}</span><span>  - : {{jieOver}}</span><span>  * : {{chenOver}}</span><span>  / : {{chuOver}}</span></div>-->
   <div class="k"></div>
-  <div v-show="isgo===1"><Jia @overjia="showOverJia" ></Jia></div>
-  <div v-show="isgo===2"><Jie  @overjie="showOverJie"></Jie></div>
-  <div v-if="isgo===3"><Chen @overchen="showOverchen"></Chen></div>
-  <div  v-if="isgo===4"><Chu @overchu="showOverchu"></Chu></div>
+ <router-view></router-view>
 <!--  <div v-show="isgo===5"><My></My></div>-->
 
 </template>
@@ -94,7 +94,7 @@ export default {
   background-color: #f7d8d8;
 
 }
-.yiyi span {
+.yiyi a{
   font-size: 28px;
   width: 18%;
   text-align: center;
@@ -102,7 +102,7 @@ export default {
   border-radius: 50%;
   opacity: 0.5;
 }
-.yiyi span:hover{
+.yiyi a:hover{
   opacity: 0.8;
 }
 .yiImg{
