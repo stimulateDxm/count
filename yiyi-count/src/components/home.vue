@@ -2,8 +2,9 @@
   <div class="yiyi">
     <router-link to="/jia" >加</router-link>
     <router-link to="/jie">减</router-link>
-    <router-link to="chen">乘</router-link>
-    <router-link to="chu">除</router-link>
+    <router-link to="/chen">乘</router-link>
+    <router-link to="/chu">除</router-link>
+    <router-link to="/">测试</router-link>
 <!--    <span @click="isgo=5" class="yiImg"><img src="../../src/assets/yiyi.png"></span>-->
   </div>
 <!--  <div class="over"><span>总完成:{{over}}</span><span>  + : {{jiaOver}}</span><span>  - : {{jieOver}}</span><span>  * : {{chenOver}}</span><span>  / : {{chuOver}}</span></div>-->
@@ -14,18 +15,14 @@
 </template>
 
 <script>
-import Jia from "../components/jia"
-import Jie from "../components/jie"
-import Chen from "../components/chen"
-import Chu from "../components/chu"
+
 // import My from "../components/my"
 
 import {reactive,toRefs,onUpdated} from 'vue'
 export default {
   name: 'Home',
-  components: {
-    Jia,Jie,Chen,Chu
-  },
+
+
   setup(){
 
     let h= reactive({
