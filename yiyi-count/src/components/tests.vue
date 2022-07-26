@@ -106,6 +106,7 @@ ul{
 ul li {
   margin-top: 10px;
   width: 100%;
+  margin-left: 20px;
 }
 ul li input{
   width: 4rem;
