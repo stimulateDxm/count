@@ -66,7 +66,7 @@ export default {
   font-size: 20px;
 }
 .k{
-  height: 90px;
+  height: 50px;
 }
 .over {
   border: 1px solid lightseagreen;
@@ -83,17 +83,17 @@ export default {
 }
 .yiyi{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   height: 45px;
- position: fixed;
+  position: fixed;
   z-index: 999999;
   background-color: #f7d8d8;
 
 }
 .yiyi a{
-  font-size: 28px;
-  width: 18%;
+  font-size: 26px;
+  width: 15%;
   text-align: center;
   background-color: #4e9ce9;
   border-radius: 50%;

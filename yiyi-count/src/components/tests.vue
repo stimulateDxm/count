@@ -3,22 +3,24 @@
   <li v-for="(v,i) of jia" :key="i">
     <span> {{v.pre}}</span><p>+</p><span>{{v.next}}</span><p>=</p>
    <input type="text" class="result" ref="results">
-    <span  class="svgs" >
-  </span>
+    <span  class="svgs" ></span>
+
   </li>
   </ul>
   <ul class="jieul">
   <li v-for="(v,i) of jie" :key="i">
     <span> {{v.pre}}</span><p>-</p><span>{{v.next}}</span><p>=</p>
     <input type="text" class="result" ref="results">
-    <span  class="svgs" >
-  </span>
+    <span  class="svgs" ></span>
+
   </li>
   </ul>
   <div >
     <button @click="buttons()">提交</button>
-    <p>得分：{{score*2}}</p>
-    <p>错题数：{{50-score}}</p>
+    <div v-if="isscore" class="score">
+      <p>得分：{{score*2}}</p>
+      <p>错题数：{{50-score}}</p>
+    </div>
   </div>
 </template>
 
@@ -34,10 +36,14 @@ export default {
       jia:[],
       jie:[],
       resultss:[],
-      score:0
+      score:0,
+      isscore:false,
+      mins:0,
+      maxs:20
     })
 
     t.buttons=()=>{
+
    for (let i=0;i<50;i++){
      if(t.results[i].value==t.resultss[i] && t.results[i].value != "" ){
        t.score++
@@ -53,6 +59,7 @@ export default {
 
      }
    }
+   t.isscore=true
 
     }
     //随机数函数
@@ -60,10 +67,10 @@ export default {
       return Math.floor(Math.random() * (max - min)) + min;
     }
     for (let i=0;i<25;i++){
-      const obj1={pre:t.random(0,20),next:t.random(0,20)}
+      const obj1={pre:t.random(t.mins,20),next:t.random(t.mins,20)}
       t.jia.push(obj1)
       t.resultss.push(t.jia[i].pre+t.jia[i].next)
-      const obj2={pre:t.random(0,20),next:t.random(0,20)}
+      const obj2={pre:t.random(t.mins,20),next:t.random(t.mins,20)}
       if(obj2.pre-obj2.next<0){
         obj2.pre=obj2.pre+obj2.next
         obj2.next=obj2.pre-obj2.next
@@ -89,6 +96,14 @@ export default {
   margin: 0;
   padding: 0;
 }
+.score{
+  width: 250px;
+  height: 80px;
+  background-color: #067ded;
+  position: fixed;
+  top: 85%;
+  left: 50%;
+}
 button{
   border: 1px solid transparent;
   background-color: #53abe5;
@@ -98,15 +113,12 @@ button{
 }
 ul li span, input{
   text-align: center;
+}
 
-}
-ul{
-  width: 100%;
-}
+
 ul li {
   margin-top: 10px;
-  width: 100%;
-  margin-left: 20px;
+  list-style: none;
 }
 ul li input{
   width: 4rem;
@@ -114,6 +126,11 @@ ul li input{
   font-size: 20px;
   border: 1px solid white;
   text-align: center;
+}
+
+ul li span {
+  display: inline-block;
+  width: 80px;
 }
 ul li p{
   display: inline-block;
