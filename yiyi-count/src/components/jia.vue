@@ -23,10 +23,10 @@ export default {
       results : ref(),
       nums:[],
       isof:false,
-      mins:1,
-      maxs:16,
-      minss:1,
-      maxss:16,
+      mins:10,
+      maxs:38,
+      minss:10,
+      maxss:38,
       overjia:0
     })
 
@@ -34,7 +34,7 @@ export default {
     h.random=(min, max)=> {
       return Math.floor(Math.random() * (max - min)) + min;
     }
-    //随机生成20组对象并增加为一个数组
+    //随机生成50组对象并增加为一个数组
     for (let i=0; i<50;i++){
       const obj={pre:h.random(h.minss,h.maxss),next:h.random(h.minss,h.maxss)}
       h.nums.push(obj)

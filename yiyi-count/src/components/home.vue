@@ -9,7 +9,9 @@
   </div>
 <!--  <div class="over"><span>总完成:{{over}}</span><span>  + : {{jiaOver}}</span><span>  - : {{jieOver}}</span><span>  * : {{chenOver}}</span><span>  / : {{chuOver}}</span></div>-->
   <div class="k"></div>
- <router-view></router-view>
+  <keep-alive>
+    <router-view></router-view>
+  </keep-alive>
 <!--  <div v-show="isgo===5"><My></My></div>-->
 
 </template>
