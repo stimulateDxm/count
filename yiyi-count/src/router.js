@@ -9,7 +9,10 @@ import Chu from "./components/chu"
 const router =createRouter({
     history:createWebHashHistory(),
     routes:[
-
+        {
+            path:"/",
+            component:Jia
+        },
         {
             path:"/jia",
             component:Jia
