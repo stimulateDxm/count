@@ -4,7 +4,16 @@
     <router-link to="/jie">减</router-link>
     <router-link to="/chen">乘</router-link>
     <router-link to="/chu">除</router-link>
-    <router-link to="/">测试</router-link>
+   <div class="test" >
+     <span>测试</span>
+     <ul>
+       <li><a href="https://stimulatedxm.github.io/yiyi-count/rejiajie/index.html">两个数相加</a></li>
+       <li><a href="https://stimulatedxm.github.io/yiyi-count/shanjia/index.html">三个数相加</a></li>
+       <li><a href="https://stimulatedxm.github.io/yiyi-count/sijia/index.html">四个数相加</a></li>
+       <li><a href="https://stimulatedxm.github.io/yiyi-count/wujia/index.html">五个数相加</a></li>
+     </ul>
+   </div>
+
 <!--    <span @click="isgo=5" class="yiImg"><img src="../../src/assets/yiyi.png"></span>-->
   </div>
 <!--  <div class="over"><span>总完成:{{over}}</span><span>  + : {{jiaOver}}</span><span>  - : {{jieOver}}</span><span>  * : {{chenOver}}</span><span>  / : {{chuOver}}</span></div>-->
@@ -93,25 +102,37 @@ export default {
   background-color: #f7d8d8;
 
 }
-.yiyi a{
+.yiyi a,.test{
   font-size: 26px;
   width: 15%;
   text-align: center;
-  background-color: #4e9ce9;
+  background-color: #9ac3ec;
   border-radius: 50%;
-  opacity: 0.5;
+  color: white;
+}
+a{
+text-decoration: none;
 }
 .yiyi a:hover{
-  opacity: 0.8;
+  cursor:pointer;
+  background-color: #0b7ced;
 }
-.yiImg{
-  opacity: 0.9;
-  border: 3px solid #53abe5;
-  border-radius: 50%;
-  overflow: hidden;
+.test:hover ul{
+  cursor:pointer;
+  background-color: #0b7ced;
+  display: block;
 }
-.yiImg img{
-  width: 100%;
-  height: 100%;
+.test ul {
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  opacity: 1;
+  width: 100px;
+  display: none;
+}
+.test ul li a{
+  font-size: 20px;
+  border-radius:95px ;
 }
 </style>
